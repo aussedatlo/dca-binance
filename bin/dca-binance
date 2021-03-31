@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+
+__author__ = "Louis Aussedat"
+__copyright__ = "Copyright (c) 2021 Louis Aussedat"
+__license__ = "GPLv3"
+
+from dca_binance.dca_binance import exec_command_line
+import sys
+
+if __name__ == "__main__":
+	exec_command_line(sys.argv)
