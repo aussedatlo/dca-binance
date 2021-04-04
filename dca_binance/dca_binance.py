@@ -77,8 +77,8 @@ def main(argv):
 
     client = Client(api_key, api_secret)
 
-    avg_price = client.get_avg_price(symbol=symbol)
-    avg_price = float(avg_price['price'])
+    depth = client.get_order_book(symbol=symbol, limit=5)
+    avg_price = float(depth['bids'][0][0])
 
     quantity = ammount / avg_price
     quantity = "{:0.0{}f}".format(quantity, 5)
